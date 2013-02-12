@@ -1,6 +1,6 @@
 {
-    "name": "touch",
-    "title": "jQuery Touch",
+    "name": "touchslider",
+    "title": "jQuery Touchslider",
     "description": "A lightweight mobile-ready touchslider.",
     "keywords": [
         "ios",
