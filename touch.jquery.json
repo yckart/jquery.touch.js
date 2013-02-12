@@ -8,11 +8,11 @@
         "iphone",
         "android",
         "touchmove",
-        "touchmover"
-        "touchslide".
-        "touchslider",
+        "touchmover",
+        "touchslide",
+        "touchslider"
     ],
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": {
         "name": "Yannick Albert",
         "email" : "mail@yckart.com",
