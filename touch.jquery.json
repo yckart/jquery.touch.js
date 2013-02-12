@@ -15,8 +15,16 @@
     "version": "0.0.1",
     "author": {
         "name": "Yannick Albert",
+        "email" : "mail@yckart.com",
         "url": "https://github.com/yckart"
     },
+    "maintainers": [
+        {
+            "name": "Yannick Albert",
+            "email": "mail@yckart.com",
+            "url": "http://yckart.com"
+        }
+    ],
     "licenses": [
         {
             "type": "MIT",
