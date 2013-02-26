@@ -1,37 +1,61 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width'>
 
-        <style>
-            html,body {height:100%; color:#0ae; font-family:sans-serif}
+    <style>
+        body{background: whitesmoke}
+        #square {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -100px 0 0 -100px;
+            width: 200px;
+            height: 200px;
+            color: deeppink;
+            font: 700 32px sans-serif;
+            text-align: center;
+            line-height: 200px;
+            border: 1px solid deeppink;
+            background: #222;
+            box-shadow: 0 0 10px black
+        }
+        .false #square {text-indent:-99999px; background: url(qr.png)}
 
-            .slide {float:left; width:320px; height:240px; line-height:240px; text-align:center;}
-            .slide:nth-child(1) {background:#444}
-            .slide:nth-child(2) {background:#333}
-            .slide:nth-child(3) {background:#222}
-            .slide:nth-child(4) {background:#111}
-            .slide:nth-child(5) {background:#000}
-        </style>
+        .touching {opacity:0.8}
+    </style>
 
-        <title>jquery.touch.js | A lightweight mobile-ready touchslider</title>
-    </head>
+    <title>jquery.touch.js | Drag, scale and rotate elements during touch.</title>
+</head>
 
-    <body>
-        <div class="slider" style="width: 320px; overflow:hidden">
-            <div class="slides">
-                <div class="slide">1st</div>
-                <div class="slide">2nd</div>
-                <div class="slide">3rd</div>
-                <div class="slide">4th</div>
-            </div>
-        </div>
+<body>
+    <div id="square">Finger me!</div>
 
-        <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
-        <script src='jquery.touch.js'></script>
-        <script>
-            $('.slider').touchSlider();
-        </script>
-    </body>
+    <input type="checkbox" id="draggable" checked="checked">
+    <label for='draggable'>Draggable</label>
+
+    <input type="checkbox" id="rotatable" checked="checked">
+    <label for='rotatable'>Rotatable</label>
+
+    <input type="checkbox" id="scalable" checked="checked">
+    <label for='scalable'>Scalable</label>
+
+
+
+    <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+    <script src='jquery.touch.js'></script>
+    <script>
+        document.documentElement.className += "ontouchend" in document;
+        var square = $('#square').touch();
+
+        var setOptions = function(id) {
+            square.data('plugin_touch').options[id] = $("#" + id).prop("checked");
+        };
+
+        $('input').on('change', function() {
+            setOptions(this.id);
+        });
+    </script>
+</body>
 </html>

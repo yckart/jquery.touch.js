@@ -1,29 +1,32 @@
 {
     "name": "touch",
     "title": "jQuery Touch",
-    "description": "A lightweight mobile-ready touchslider.",
+    "description": "Drag, scale and rotate elements during touch.",
     "keywords": [
         "ios",
         "ipad",
         "iphone",
         "android",
         "touchmove",
-        "touchmover",
-        "touchslide",
-        "touchslider"
+        "drag",
+        "draggable",
+        "scale",
+        "scalable",
+        "resize",
+        "resizable",
+        "rotate",
+        "rotatable"
     ],
-    "version": "0.0.4",
+    "version": "0.0.5",
     "author": {
         "name": "Yannick Albert",
         "email": "mail@yckart.com",
         "url": "https://github.com/yckart"
     },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "http://yckart.com/mit/"
-        }
-    ],
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://yckart.com/mit/"
+    }],
     "homepage": "http://yckart.github.com/jquery.touch.js",
     "demo": "http://yckart.github.com/jquery.touch.js",
     "docs": "https://github.com/yckart/jquery.touch.js",
